@@ -1,0 +1,90 @@
+/* ============================================
+   Subscribe Section Styles
+   ============================================ */
+
+.subscribe {
+    background: var(--color-olive);
+    padding: var(--section-padding);
+}
+
+.subscribe__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.subscribe__title {
+    font-size: 2.8rem;
+    color: var(--color-white);
+    margin-bottom: 20px;
+}
+
+.subscribe__description {
+    font-size: 0.95rem;
+    color: var(--color-sage-light);
+    line-height: 1.7;
+}
+
+.subscribe__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.subscribe__label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+.subscribe__input {
+    width: 100%;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    border-radius: 4px;
+    color: var(--color-white);
+    font-size: 0.9rem;
+    transition: var(--transition-fast);
+}
+
+.subscribe__input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.subscribe__input:focus {
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+.subscribe__btn {
+    align-self: flex-start;
+    padding: 12px 36px;
+    border: 1.5px solid var(--color-white);
+    color: var(--color-white);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    border-radius: 50px;
+    transition: var(--transition-smooth);
+    margin-top: 4px;
+}
+
+.subscribe__btn:hover {
+    background: var(--color-white);
+    color: var(--color-olive-dark);
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .subscribe__container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .subscribe__title {
+        font-size: 2rem;
+    }
+}

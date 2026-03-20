@@ -1,0 +1,56 @@
+/* ============================================
+   Testimonials Section Styles
+   ============================================ */
+
+.testimonials {
+    background: var(--color-olive-dark);
+    padding: 100px 0;
+}
+
+.testimonials__container {
+    text-align: center;
+    max-width: 800px;
+}
+
+.testimonials__title {
+    font-size: 2.4rem;
+    color: var(--color-white);
+    margin-bottom: 48px;
+}
+
+.testimonials__quote {
+    margin-bottom: 32px;
+}
+
+.testimonials__quote p {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    color: var(--color-sage-light);
+    line-height: 1.9;
+    font-weight: 300;
+}
+
+.testimonials__author {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--color-white);
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .testimonials {
+        padding: 60px 0;
+    }
+
+    .testimonials__title {
+        font-size: 1.8rem;
+        margin-bottom: 32px;
+    }
+
+    .testimonials__quote p {
+        font-size: 0.9rem;
+    }
+}

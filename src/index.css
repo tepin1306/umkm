@@ -1,0 +1,157 @@
+/* ============================================
+   POVEDA - Travel Agency Design System
+   ============================================ */
+
+/* CSS Custom Properties */
+:root {
+  /* Colors */
+  --color-olive: #8b5a2b; /* Brown base */
+  --color-olive-dark: #5c3a21; /* Dark brown */
+  --color-olive-light: #a67c52; /* Lighter brown / caramel */
+  --color-sage: #f4e8d8; /* Warm beige */
+  --color-sage-light: #fdfaf5; /* Lighter beige */
+  --color-sage-dark: #e0d0b8; /* Darker beige */
+  --color-white: #ffffff;
+  --color-off-white: #faf6f0;
+  --color-text-dark: #2a1c11; /* Dark brown text */
+  --color-text-light: #f0e6d2;
+  
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Montserrat', 'Segoe UI', Tahoma, sans-serif;
+  
+  /* Spacing */
+  --section-padding: 100px 0;
+  --container-padding: 0 80px;
+  --container-max: 1400px;
+  
+  /* Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-fast: all 0.2s ease;
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text-dark);
+  background-color: var(--color-sage);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-fast);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
+/* Container */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
+
+/* Section title style */
+.section-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+/* Scroll animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Responsive container */
+@media (max-width: 1200px) {
+  :root {
+    --container-padding: 0 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 0 24px;
+    --section-padding: 60px 0;
+  }
+
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --container-padding: 0 16px;
+    --section-padding: 48px 0;
+  }
+}

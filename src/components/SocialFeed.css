@@ -1,0 +1,89 @@
+/* ============================================
+   Social Feed Section Styles
+   ============================================ */
+
+.social {
+    padding: var(--section-padding);
+    background: var(--color-sage);
+}
+
+.social__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 48px;
+}
+
+.social__item {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.social__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.social__item:hover img {
+    transform: scale(1.08);
+}
+
+.social__item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(74, 84, 64, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.social__item:hover .social__item-overlay {
+    opacity: 1;
+}
+
+.social__instagram-icon {
+    width: 40px;
+    height: 40px;
+    color: var(--color-white);
+}
+
+.social__handle {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 14px 40px;
+    border: 1.5px solid var(--color-olive);
+    color: var(--color-olive);
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    border-radius: 50px;
+    transition: var(--transition-smooth);
+}
+
+.social__handle:hover {
+    background: var(--color-olive);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .social__grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto 40px;
+        gap: 20px;
+    }
+}

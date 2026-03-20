@@ -1,0 +1,321 @@
+/* ============================================
+   About Page Styles
+   ============================================ */
+
+.about-page__hero {
+    position: relative;
+    height: 50vh;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-olive-dark);
+    overflow: hidden;
+}
+
+.about-page__hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/about-temple.png') center/cover no-repeat;
+    opacity: 0.3;
+}
+
+.about-page__hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(58, 66, 48, 0.7) 0%, rgba(58, 66, 48, 0.9) 100%);
+}
+
+.about-page__hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 24px;
+    animation: aboutFadeUp 1s ease forwards;
+}
+
+@keyframes aboutFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-page__hero-title {
+    font-size: 3.5rem;
+    color: var(--color-white);
+    margin-bottom: 16px;
+}
+
+.about-page__hero-subtitle {
+    font-size: 1.05rem;
+    color: var(--color-sage-light);
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Story */
+.about-page__story {
+    padding: 80px 0;
+    background: var(--color-sage);
+}
+
+.about-page__story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-page__story-image {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.about-page__story-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.about-page__story-content h2 {
+    font-size: 2.4rem;
+    color: var(--color-olive);
+    margin-bottom: 24px;
+}
+
+.about-page__story-content p {
+    font-size: 0.95rem;
+    color: var(--color-olive-light);
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+/* Values */
+.about-page__values {
+    padding: 80px 0;
+    background: var(--color-sage-light);
+}
+
+.about-page__section-title {
+    text-align: center;
+    font-size: 2.4rem;
+    color: var(--color-olive);
+    margin-bottom: 48px;
+}
+
+.about-page__values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.about-page__value-card {
+    text-align: center;
+    padding: 40px 28px;
+    background: var(--color-white);
+    border-radius: 8px;
+    transition: var(--transition-smooth);
+}
+
+.about-page__value-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(74, 84, 64, 0.12);
+}
+
+.about-page__value-icon {
+    font-size: 2.4rem;
+    margin-bottom: 16px;
+}
+
+.about-page__value-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-olive-dark);
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+}
+
+.about-page__value-card p {
+    font-size: 0.88rem;
+    color: var(--color-olive-light);
+    line-height: 1.6;
+}
+
+/* Stats */
+.about-page__stats {
+    padding: 60px 0;
+    background: var(--color-olive);
+}
+
+.about-page__stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.about-page__stat-number {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: var(--color-white);
+    margin-bottom: 8px;
+}
+
+.about-page__stat-label {
+    font-size: 0.85rem;
+    color: var(--color-sage-light);
+    letter-spacing: 0.05em;
+}
+
+/* Team */
+.about-page__team {
+    padding: 80px 0;
+    background: var(--color-sage);
+}
+
+.about-page__team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.about-page__team-card {
+    text-align: center;
+    padding: 36px 20px;
+    background: var(--color-white);
+    border-radius: 8px;
+    transition: var(--transition-smooth);
+}
+
+.about-page__team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(74, 84, 64, 0.1);
+}
+
+.about-page__team-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--color-olive);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    margin: 0 auto 16px;
+}
+
+.about-page__team-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-olive-dark);
+    margin-bottom: 4px;
+}
+
+.about-page__team-role {
+    font-size: 0.78rem;
+    color: var(--color-olive-light);
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.about-page__team-bio {
+    font-size: 0.85rem;
+    color: var(--color-olive-light);
+    line-height: 1.5;
+}
+
+/* CTA */
+.about-page__cta-section {
+    padding: 80px 0;
+    background: var(--color-olive-dark);
+}
+
+.about-page__cta-section h2 {
+    font-size: 2.2rem;
+    color: var(--color-white);
+    margin-bottom: 16px;
+}
+
+.about-page__cta-section p {
+    font-size: 1rem;
+    color: var(--color-sage-light);
+    margin-bottom: 32px;
+}
+
+.about-page__cta-btn {
+    display: inline-block;
+    padding: 16px 44px;
+    border: 1.5px solid var(--color-white);
+    color: var(--color-white);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    border-radius: 50px;
+    transition: var(--transition-smooth);
+}
+
+.about-page__cta-btn:hover {
+    background: var(--color-white);
+    color: var(--color-olive-dark);
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+
+    .about-page__stats-grid,
+    .about-page__team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-page__hero-title {
+        font-size: 2.5rem;
+    }
+
+    .about-page__story-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .about-page__story-image img {
+        height: 300px;
+    }
+
+    .about-page__values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-page__stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-page__team-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .about-page__section-title {
+        font-size: 1.8rem;
+    }
+}

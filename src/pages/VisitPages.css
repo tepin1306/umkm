@@ -1,0 +1,419 @@
+/* ============================================
+   Visit Pages Shared Styles
+   ============================================ */
+
+/* Hero Banner (shared) */
+.visit-page__hero {
+    position: relative;
+    height: 50vh;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-olive-dark);
+    overflow: hidden;
+}
+
+.visit-page__hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/gallery-temple.png') center/cover no-repeat;
+    opacity: 0.3;
+}
+
+.visit-page__hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(58, 66, 48, 0.7) 0%, rgba(58, 66, 48, 0.9) 100%);
+}
+
+.visit-page__hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 24px;
+    animation: visitFadeUp 1s ease forwards;
+}
+
+@keyframes visitFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.visit-page__hero-title {
+    font-size: 3.5rem;
+    color: var(--color-white);
+    margin-bottom: 16px;
+}
+
+.visit-page__hero-subtitle {
+    font-size: 1.05rem;
+    color: var(--color-sage-light);
+    font-weight: 400;
+}
+
+.visit-page__content {
+    padding: 80px 0;
+    background: var(--color-sage);
+}
+
+/* CTA bottom section (shared) */
+.visit-page__cta-section {
+    padding: 80px 0;
+    background: var(--color-olive-dark);
+}
+
+.visit-page__cta-section h2 {
+    font-size: 2.2rem;
+    color: var(--color-white);
+    margin-bottom: 16px;
+}
+
+.visit-page__cta-section p {
+    font-size: 1rem;
+    color: var(--color-sage-light);
+    margin-bottom: 32px;
+}
+
+.visit-page__cta-btn {
+    display: inline-block;
+    padding: 16px 44px;
+    border: 1.5px solid var(--color-white);
+    color: var(--color-white);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    border-radius: 50px;
+    transition: var(--transition-smooth);
+}
+
+.visit-page__cta-btn:hover {
+    background: var(--color-white);
+    color: var(--color-olive-dark);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   Gallery Page
+   ============================================ */
+
+.gallery-page__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.gallery-page__item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.gallery-page__item:nth-child(1) {
+    grid-row: span 2;
+}
+
+.gallery-page__item:nth-child(5) {
+    grid-column: span 2;
+}
+
+.gallery-page__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 250px;
+    transition: transform 0.6s ease;
+}
+
+.gallery-page__item:hover img {
+    transform: scale(1.06);
+}
+
+.gallery-page__item-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.gallery-page__item:hover .gallery-page__item-info {
+    transform: translateY(0);
+}
+
+.gallery-page__item-info h3 {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    color: var(--color-white);
+    margin-bottom: 4px;
+}
+
+.gallery-page__item-info p {
+    font-size: 0.8rem;
+    color: var(--color-sage-light);
+}
+
+/* ============================================
+   Places Page
+   ============================================ */
+
+.places-page__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.places-page__item:last-child {
+    margin-bottom: 0;
+}
+
+.places-page__item--reverse {
+    direction: rtl;
+}
+
+.places-page__item--reverse>* {
+    direction: ltr;
+}
+
+.places-page__image {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.places-page__image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.places-page__image:hover img {
+    transform: scale(1.04);
+}
+
+.places-page__subtitle {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-olive-light);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.places-page__title {
+    font-size: 2.5rem;
+    color: var(--color-olive);
+    margin-bottom: 20px;
+}
+
+.places-page__description {
+    font-size: 0.95rem;
+    color: var(--color-olive-light);
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+.places-page__highlights {
+    margin-bottom: 28px;
+}
+
+.places-page__highlights li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0;
+    font-size: 0.9rem;
+    color: var(--color-olive);
+}
+
+.places-page__highlights li svg {
+    color: var(--color-olive);
+    flex-shrink: 0;
+}
+
+.places-page__cta {
+    display: inline-block;
+    padding: 12px 32px;
+    border: 1.5px solid var(--color-olive);
+    color: var(--color-olive);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    border-radius: 50px;
+    transition: var(--transition-smooth);
+}
+
+.places-page__cta:hover {
+    background: var(--color-olive);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   Adventures Page
+   ============================================ */
+
+.adventures-page__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.adventures-page__card {
+    background: var(--color-white);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 16px rgba(74, 84, 64, 0.08);
+}
+
+.adventures-page__card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(74, 84, 64, 0.15);
+}
+
+.adventures-page__card-image {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.adventures-page__card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.adventures-page__card:hover .adventures-page__card-image img {
+    transform: scale(1.06);
+}
+
+.adventures-page__card-overlay {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+
+.adventures-page__difficulty {
+    background: var(--color-olive);
+    color: var(--color-white);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    padding: 5px 14px;
+    border-radius: 50px;
+}
+
+.adventures-page__card-body {
+    padding: 24px;
+}
+
+.adventures-page__meta {
+    font-size: 0.78rem;
+    color: var(--color-olive-light);
+    margin-bottom: 8px;
+    letter-spacing: 0.03em;
+}
+
+.adventures-page__card-title {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--color-olive-dark);
+    margin-bottom: 12px;
+}
+
+.adventures-page__card-desc {
+    font-size: 0.88rem;
+    color: var(--color-olive-light);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.adventures-page__card-cta {
+    display: inline-block;
+    padding: 10px 24px;
+    border: 1.5px solid var(--color-olive);
+    color: var(--color-olive);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    border-radius: 50px;
+    transition: var(--transition-smooth);
+}
+
+.adventures-page__card-cta:hover {
+    background: var(--color-olive);
+    color: var(--color-white);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .gallery-page__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-page__item:nth-child(1) {
+        grid-row: auto;
+    }
+
+    .gallery-page__item:nth-child(5) {
+        grid-column: auto;
+    }
+
+    .adventures-page__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .visit-page__hero-title {
+        font-size: 2.5rem;
+    }
+
+    .gallery-page__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .places-page__item {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-bottom: 60px;
+    }
+
+    .places-page__item--reverse {
+        direction: ltr;
+    }
+
+    .places-page__title {
+        font-size: 1.8rem;
+    }
+
+    .adventures-page__grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+}
