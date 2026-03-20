@@ -1,5 +1,4 @@
 import Hero from '../components/Hero';
-import QRCodeSection from '../components/QRCodeSection';
 import Gallery from '../components/Gallery';
 import About from '../components/About';
 import Featured from '../components/Featured';
@@ -12,7 +11,6 @@ function HomePage() {
     return (
         <div className="home-page">
             <Hero />
-            <QRCodeSection />
             <Gallery />
             <About />
             <Featured />
